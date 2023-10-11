@@ -3,7 +3,7 @@
 <%= for post <- @posts do %>
   <div id="{post.id}" style="margin-bottom: 3rem;">
     <h2>
-      <.link herf={Routes.blog_path(@conn, :show, post)}>{post.title}</.link>
+      <.link href={~p"/blog/#{post.id}"}><%= post.title %></.link>
     </h2>
 
     <p>
